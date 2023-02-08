@@ -1,18 +1,25 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.chandroidx.dfpluginandroid</id>
-    <name>IntelliJ Platform Plugin DFPlugin-Android</name>
-    <vendor>chandroidx</vendor>
+    <name>DFPlugin</name>
+    <vendor>DFPlugin</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.chandroidx.dfpluginandroid.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.chandroidx.dfpluginandroid.services.MyProjectService"/>
+    <!--    <extensions defaultExtensionNs="com.intellij">-->
+    <!--        <applicationService-->
+    <!--                serviceImplementation="com.github.chandroidx.dfpluginandroid.services.MyApplicationService"/>-->
+    <!--        <projectService serviceImplementation="com.github.chandroidx.dfpluginandroid.services.MyProjectService"/>-->
+    <!--    </extensions>-->
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider
+                implementation="com.github.chandroidx.dfpluginandroid.template.WizardTemplateProviderImpl"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.chandroidx.dfpluginandroid.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <!--    <applicationListeners>-->
+    <!--        <listener class="com.github.chandroidx.dfpluginandroid.listeners.MyProjectManagerListener"-->
+    <!--                  topic="com.intellij.openapi.project.ProjectManagerListener"/>-->
+    <!--    </applicationListeners>-->
 </idea-plugin>

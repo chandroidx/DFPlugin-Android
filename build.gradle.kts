@@ -34,11 +34,18 @@ kotlin {
 // Configure Gradle IntelliJ Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
     pluginName.set(properties("pluginName"))
-    version.set(properties("platformVersion"))
+//    version.set(properties("platformVersion"))
     type.set(properties("platformType"))
 
+    localPath.set(properties("StudioRunPath"))
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     plugins.set(properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty))
+}
+
+tasks {
+    instrumentCode {
+        compilerVersion.set("221.6008.13") //현재 사용중인 Android Studio Version
+    }
 }
 
 // Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
