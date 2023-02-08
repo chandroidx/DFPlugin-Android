@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.chandroidx.dfpluginandroid.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.chandroidx.dfpluginandroid.MyBundle
 
 class MyApplicationService {
 
