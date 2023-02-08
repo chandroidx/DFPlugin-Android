@@ -1,12 +1,12 @@
-package com.github.chandroidx.dfpluginandroid.template
+package com.github.chandroidx.dfpluginandroid.template.fragment
 
 import com.android.tools.idea.wizard.template.*
 import com.android.tools.idea.wizard.template.impl.defaultPackageNameParameter
 
-val activityTemplate
+val fragmentTemplate
     get() = template {
-        name = "DeepFine Activity Template"
-        description = "Creates new Activity/ViewModel with layout"
+        name = "DeepFine Fragment Template"
+        description = "Creates new Fragment/ViewModel with layout"
         minApi = 16
         category = Category.Other
         formFactor = FormFactor.Mobile
@@ -17,9 +17,9 @@ val activityTemplate
 
         val packageName = defaultPackageNameParameter
         val className = stringParameter {
-            name = "Name"
+            name = "Template"
             default = "Sample"
-            help = "Layer Name"
+            help = "Template Name"
             constraints = listOf(Constraint.NONEMPTY)
         }
 
@@ -29,11 +29,10 @@ val activityTemplate
         )
 
         recipe = { data: TemplateData ->
-            activitySetup(
+            fragmentRecipe(
                     data as ModuleTemplateData,
                     packageName.value,
                     className.value,
             )
-
         }
     }

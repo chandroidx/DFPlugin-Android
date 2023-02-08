@@ -1,4 +1,4 @@
-package com.github.chandroidx.dfpluginandroid.template
+package com.github.chandroidx.dfpluginandroid.template.activity
 
 import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.RecipeExecutor
@@ -6,7 +6,7 @@ import com.github.chandroidx.dfpluginandroid.templateDetail.createActivity
 import com.github.chandroidx.dfpluginandroid.templateDetail.createLayout
 import com.github.chandroidx.dfpluginandroid.templateDetail.createViewModel
 
-fun RecipeExecutor.activitySetup(
+fun RecipeExecutor.activityRecipe(
         moduleData: ModuleTemplateData,
         packageName: String,
         className: String,
