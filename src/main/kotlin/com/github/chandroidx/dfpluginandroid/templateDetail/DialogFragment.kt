@@ -11,7 +11,7 @@ fun createDialogFragment(
 
 import ai.deepfine.presentation.base.BaseDialogFragment
 import ${packageName}.databinding.${bindingName}
-import ${packageName}.viewmodel.${viewModelName}
+import ${packageName}.viewModel.${viewModelName}
 import android.view.LayoutInflater
 import android.content.Context
 import android.view.ViewGroup

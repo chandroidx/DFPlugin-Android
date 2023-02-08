@@ -11,7 +11,7 @@ fun createFragment(
 
 import ai.deepfine.presentation.base.BaseFragment
 import ${packageName}.databinding.${bindingName}
-import ${packageName}.viewmodel.${viewModelName}
+import ${packageName}.viewModel.${viewModelName}
 import android.view.LayoutInflater
 import android.content.Context
 import android.view.ViewGroup

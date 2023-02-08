@@ -11,7 +11,7 @@ fun createActivity(
 
 import ai.deepfine.presentation.base.BaseActivity
 import ${packageName}.databinding.${bindingName}
-import ${packageName}.viewmodel.${viewModelName}
+import ${packageName}.viewModel.${viewModelName}
 import android.view.LayoutInflater
 import android.content.Context
 import android.content.Intent

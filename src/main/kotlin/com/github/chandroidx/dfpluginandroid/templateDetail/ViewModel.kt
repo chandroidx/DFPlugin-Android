@@ -6,7 +6,7 @@ fun createViewModel(
 ): String {
     val viewModelName = "${className}ViewModel"
 
-    return """package ${packageName}.viewmodel
+    return """package ${packageName}.viewModel
 import ai.deepfine.presentation.base.BaseViewModelImpl
 import ai.deepfine.presentation.coroutine.BaseCoroutineScope
 import dagger.hilt.android.lifecycle.HiltViewModel
